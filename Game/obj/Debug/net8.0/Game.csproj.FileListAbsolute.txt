@@ -1,0 +1,15 @@
+D:\OOP-3sem-kpi\Game\bin\Debug\net8.0\Game.exe
+D:\OOP-3sem-kpi\Game\bin\Debug\net8.0\Game.deps.json
+D:\OOP-3sem-kpi\Game\bin\Debug\net8.0\Game.runtimeconfig.json
+D:\OOP-3sem-kpi\Game\bin\Debug\net8.0\Game.dll
+D:\OOP-3sem-kpi\Game\bin\Debug\net8.0\Game.pdb
+D:\OOP-3sem-kpi\Game\obj\Debug\net8.0\Game.GeneratedMSBuildEditorConfig.editorconfig
+D:\OOP-3sem-kpi\Game\obj\Debug\net8.0\Game.AssemblyInfoInputs.cache
+D:\OOP-3sem-kpi\Game\obj\Debug\net8.0\Game.AssemblyInfo.cs
+D:\OOP-3sem-kpi\Game\obj\Debug\net8.0\Game.csproj.CoreCompileInputs.cache
+D:\OOP-3sem-kpi\Game\obj\Debug\net8.0\Game.sourcelink.json
+D:\OOP-3sem-kpi\Game\obj\Debug\net8.0\Game.dll
+D:\OOP-3sem-kpi\Game\obj\Debug\net8.0\refint\Game.dll
+D:\OOP-3sem-kpi\Game\obj\Debug\net8.0\Game.pdb
+D:\OOP-3sem-kpi\Game\obj\Debug\net8.0\Game.genruntimeconfig.cache
+D:\OOP-3sem-kpi\Game\obj\Debug\net8.0\ref\Game.dll
