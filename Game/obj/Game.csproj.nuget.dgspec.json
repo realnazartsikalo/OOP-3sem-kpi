@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\OOP-3sem-kpi\\Game\\Game.csproj": {}
+    "/workspaces/OOP-3sem-kpi/Game/Game.csproj": {}
   },
   "projects": {
-    "D:\\OOP-3sem-kpi\\Game\\Game.csproj": {
+    "/workspaces/OOP-3sem-kpi/Game/Game.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\OOP-3sem-kpi\\Game\\Game.csproj",
+        "projectUniqueName": "/workspaces/OOP-3sem-kpi/Game/Game.csproj",
         "projectName": "Game",
-        "projectPath": "D:\\OOP-3sem-kpi\\Game\\Game.csproj",
-        "packagesPath": "C:\\Users\\routi\\.nuget\\packages\\",
-        "outputPath": "D:\\OOP-3sem-kpi\\Game\\obj\\",
+        "projectPath": "/workspaces/OOP-3sem-kpi/Game/Game.csproj",
+        "packagesPath": "/home/codespace/.nuget/packages/",
+        "outputPath": "/workspaces/OOP-3sem-kpi/Game/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\routi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/codespace/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.402/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
