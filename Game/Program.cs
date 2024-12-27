@@ -1,33 +1,46 @@
-﻿using Play.Accounts;
+﻿using Play.DB.Repository;
+using Play.DB.Service;
+using Play.DB;
 class Program
 {
     static void Main()
     {
-        StandardAccount BazNazar = new StandardAccount("Nazar", 1000);
-        StreakAccount StrAndrii = new StreakAccount("Andrii", 5);
-        EasyAccount EasyMaksym = new EasyAccount("Maksym", 100);
+        DbContext dbContext = new DbContext();
+        GameRepository gameRepository = new GameRepository(dbContext);
+        GameAccountRepository gameAccountRepository = new GameAccountRepository(dbContext);
+        GameAccountService gameAccountService = new GameAccountService(gameAccountRepository);
+        GameService gameService = new GameService(gameRepository);
 
         try
         {
-            BazNazar.GameResult(StrAndrii, true, 10, "standard");
-            BazNazar.GameResult(EasyMaksym, false, 20, "training");
+            gameAccountService.CreateGameAccount("standard","Nazar", 200);
+            gameAccountService.CreateGameAccount("easy", "Andrii", 250);
+            gameAccountService.CreateGameAccount("streak", "Maksym", 300);
 
-            StrAndrii.GameResult(BazNazar, false, 30,"standard");
-            StrAndrii.GameResult(EasyMaksym, true, 40, "training");
+            gameService.CreateGame("Nazar", 20, true);
 
-            EasyMaksym.GameResult(BazNazar, true, 50, "training");
-            EasyMaksym.GameResult(StrAndrii, false, 60, "standard");
+            gameService.CreateGame("standard", "Maksym", "Nazar", 50, true);
 
-            StrAndrii.GameResult(StrAndrii, true, 30,"bot");
-            StrAndrii.GameResult(StrAndrii, true, 30,"bot");
+            gameService.CreateGame("training", "Andrii", "Maksym", 120, true);
+
+            gameAccountService.PrintAllGameAccounts();
+
+            gameService.PrintGames();
+
+            var Naz = gameRepository.ReadGameAccountByName("Nazar");
+            var Andr = gameRepository.ReadGameAccountByName("Andrii");
+            var Max = gameRepository.ReadGameAccountByName("Maksym");
+
+            gameService.PrintGames(Naz);
+            gameService.PrintGames(Andr);
+            gameService.PrintGames(Max);
+
+
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"An error occurred: {ex.Message}");
+            Console.WriteLine($"An error: {ex.Message}");
         }
 
-        BazNazar.GetStats();
-        StrAndrii.GetStats();
-        EasyMaksym.GetStats();
     }
 }

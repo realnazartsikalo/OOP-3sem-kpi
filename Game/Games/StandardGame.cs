@@ -7,7 +7,7 @@ namespace Play.Types
             return Rating;
         }
 
-        public StandardGame(string user, string opponent, int rating, string result): base(user, opponent, rating, result)
+        public StandardGame(string user, string opponent, int rating, bool result): base(user, opponent, rating, result)
         {
             GameType = "Rating";
         }

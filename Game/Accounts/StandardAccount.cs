@@ -1,5 +1,3 @@
-using System;
-
 namespace Play.Accounts
 {
       class StandardAccount : GameAccount
@@ -8,6 +6,6 @@ namespace Play.Accounts
         {
 
         }
-
+        public override string AccountType { get; protected set; } = "Standard";
     }
 }

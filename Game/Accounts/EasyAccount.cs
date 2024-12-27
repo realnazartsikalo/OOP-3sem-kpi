@@ -1,5 +1,3 @@
-using System;
-
 namespace Play.Accounts
 {
      class EasyAccount : GameAccount
@@ -21,5 +19,6 @@ namespace Play.Accounts
         {
        
         }
+        public override string AccountType { get; protected set; } = "Easy";
     }
 }

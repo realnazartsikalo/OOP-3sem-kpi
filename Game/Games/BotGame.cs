@@ -6,7 +6,7 @@ namespace Play.Types
         {
             return Rating / 2;
         }
-        public BotGame(string user, int rating, string result) : base(user,"BOT", rating, result)
+        public BotGame(string user, int rating, bool result) : base(user,"BOT", rating, result)
         {
             GameType = "VS bot";
         }
