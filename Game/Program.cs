@@ -1,6 +1,7 @@
 ﻿using Play.DB.Repository;
 using Play.DB.Service;
 using Play.DB;
+using Play.Terminal;
 class Program
 {
     static void Main()
@@ -11,30 +12,23 @@ class Program
         GameAccountService gameAccountService = new GameAccountService(gameAccountRepository);
         GameService gameService = new GameService(gameRepository);
 
+        CommandProcessor commandProcessor = new CommandProcessor(gameAccountService, gameService);
+
+
         try
         {
-            gameAccountService.CreateGameAccount("standard","Nazar", 200);
-            gameAccountService.CreateGameAccount("easy", "Andrii", 250);
-            gameAccountService.CreateGameAccount("streak", "Maksym", 300);
+           while (true)
+                {
+                    Console.Write("Enter a command: ");
+                    string inputCommand = Console.ReadLine();
 
-            gameService.CreateGame("Nazar", 20, true);
+                    if (inputCommand.ToLower() == "exit")
+                    {
+                        break;
+                    }
 
-            gameService.CreateGame("standard", "Maksym", "Nazar", 50, true);
-
-            gameService.CreateGame("training", "Andrii", "Maksym", 120, true);
-
-            gameAccountService.PrintAllGameAccounts();
-
-            gameService.PrintGames();
-
-            var Naz = gameRepository.ReadGameAccountByName("Nazar");
-            var Andr = gameRepository.ReadGameAccountByName("Andrii");
-            var Max = gameRepository.ReadGameAccountByName("Maksym");
-
-            gameService.PrintGames(Naz);
-            gameService.PrintGames(Andr);
-            gameService.PrintGames(Max);
-
+                    commandProcessor.ProcessCommand(inputCommand);
+                }
 
         }
         catch (Exception ex)

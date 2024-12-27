@@ -30,7 +30,7 @@ namespace Play.DB.Service
             }
 
         }
-        public void  PrintGames()
+        public void  PrintAllGames()
         {
             gameRepository.PrintGames();
         }

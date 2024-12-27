@@ -6,6 +6,8 @@ namespace Play.DB.Service
         void CreateGame(string gameType, string player, string opponent, int rating, bool result);
         void UpdateGames(Game game);
         void DeleteGame(Game game);
+        void PrintGames(GameAccount gameAccount);
+        void PrintAllGames();
         GameAccount GetGameAccountByName(string userName);
     }
 }
